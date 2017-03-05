@@ -2,7 +2,7 @@
 #include <WiFiClient.h> 
 #include <ESP8266WebServer.h>
 //#include <DNSServer.h>
-#include <ESP8266mDNS.h>
+//#include <ESP8266mDNS.h>
 #include <EEPROM.h>
 #include <WiFiClientSecure.h>
 #include <WiFiUdp.h>
