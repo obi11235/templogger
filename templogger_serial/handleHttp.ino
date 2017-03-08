@@ -1,6 +1,6 @@
 void handleTemp(){
     gettemperature();
-    server.send(200, "text/plain", "Temperature: "+String((int)temp_c)+" F");
+    server.send(200, "text/plain", "Temperature: "+String((int)temp_c)+" C");
   }
 
 void handleHumid(){
