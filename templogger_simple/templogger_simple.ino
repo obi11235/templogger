@@ -62,7 +62,7 @@ void setup(void)
   
   server.on("/temp", [](){
     gettemperature();
-    webString="Temperature: "+String((int)temp_c)+" F";
+    webString="Temperature: "+String((int)temp_c)+" C";
     server.send(200, "text/plain", webString);
   });
  
