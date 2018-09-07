@@ -149,7 +149,7 @@ void readConfig(){
 
     Serial.println(dc);
     Serial.print("Enter dc: ");
-    read = Serial.readBytesUntil('\n', buffer, 4);
+    read = Serial.readBytesUntil('\n', buffer, 6);
     if(read > 0){
       buffer[read] = '\0';
       Serial.println(buffer);
@@ -163,4 +163,3 @@ void readConfig(){
   
   Serial.setTimeout(1000);
 }
-

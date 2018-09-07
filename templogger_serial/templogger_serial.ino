@@ -16,7 +16,7 @@ char apikey[34] = "";
 char dd_host[52] = "";
 char location[32] = "";
 char room[32] = "";
-char dc[4] = "";
+char dc[6] = "";
 char ntpServer[32] = "";
  
 // Initialize DHT sensor 
