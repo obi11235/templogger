@@ -1,10 +1,13 @@
 #include <Adafruit_Sensor.h>
+#include <DHT.h>
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <EEPROM.h>
 #include <WiFiClientSecure.h>
 #include <WiFiUdp.h>
-#include <DHT.h>
+
+#define DHTTYPE DHT11
+#define DHTPIN  5
 
 char ssid[32] = "";
 char password[64] = "";
@@ -44,13 +47,14 @@ ESP8266WebServer server(80);
 void setup(void)
 {
   // ESP-12 LED for Wifi indicator and NodeMCU LED for program/DD success
-  // The pin assignments are not directly to GPIO and should work across any NodeMCU board
+  // The pin assignments are not directly connected to GPIO and should work across any NodeMCU board
   if (leds_on) {
     pinMode(D4, OUTPUT); // Initialize D4 as an output for ESP-12 LED
     pinMode(D0, OUTPUT); // Initialize D0 as an output for NodeMCU LED
     digitalWrite(D0, LOW); // Turn on NodeMCU LED to indicate program is running
   }
 
+  Serial.begin(74880);
   Serial.println("");
   loadCredentials(); // Load WLAN credentials from network
 

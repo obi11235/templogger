@@ -17,7 +17,7 @@ void handleStatus(){
 }
 
 void handleroot() {
-  server.send(200, "text/html", "<html><head>Temp BUG</head><body></br>Connect DHT22 Temp sensor to GPIO0 (Pin D3)</br><a href='/temp'>Temperature</a></br><a href='/humidity'>Humidity</a></br><a href='/status'>Status</a></br></body>");
+  server.send(200, "text/html", "<html><head>Temp BUG</head><body></br>Connect DHT11 Temp sensor to GPIO5 (Pin D1)</br><a href='/temp'>Temperature</a></br><a href='/humidity'>Humidity</a></br><a href='/status'>Status</a></br></body>");
   delay(100);
 }
 
