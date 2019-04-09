@@ -18,6 +18,15 @@ templogger_accesspoint - Work in progress. NodeMCU will act as a Wifi Access Poi
 
 templogger_simple - Not actively developed.
 
+## Hardware in use:
+NodeMCU dev board
+
+https://www.amazon.com/HiLetgo-Internet-Development-Wireless-Micropython/dp/B010N1SPRK/ref=sr_1_1?keywords=hiletgo+esp8266&qid=1554826323&s=hi&sr=1-1-catcorr
+
+DHT11 temperature and humidity sensor
+
+https://www.amazon.com/HiLetgo-Temperature-Humidity-Arduino-Raspberry/dp/B01DKC2GQ0/ref=sr_1_1?keywords=hiletgo+dht11&qid=1554826409&s=hi&sr=1-1
+
 ## Arduino IDE dependencies:
 
 Add board via File > Preferences - Additional Board Manager URL and paste in:
@@ -66,11 +75,6 @@ request sent
 {"status": "ok"}
 closing connection
 ```
-
-## Hardware in use:
-https://www.amazon.com/HiLetgo-Internet-Development-Wireless-Micropython/dp/B010N1SPRK/ref=sr_1_1?keywords=hiletgo+esp8266&qid=1554826323&s=hi&sr=1-1-catcorr
-
-https://www.amazon.com/HiLetgo-Temperature-Humidity-Arduino-Raspberry/dp/B01DKC2GQ0/ref=sr_1_1?keywords=hiletgo+dht11&qid=1554826409&s=hi&sr=1-1
 
 ## Diagnostic LEDs
 LED near USB port:
