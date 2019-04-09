@@ -50,7 +50,7 @@ LED near USB port:
 * Blink - Datadog acknowledged receipt of either the temperature or the humidity metric.
 
 LED near Wifi antenna:
-Approximately 60 seconds after power on:
+Approximately 20 seconds after power on:
 * Off - no connection to Wifi SSID
 * On - connected to Wifi SSID
 
