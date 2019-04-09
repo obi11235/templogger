@@ -12,7 +12,7 @@ A NodeMCU (ESP8266) based temperature and humidity logger that submits metrics t
 
 ## Project directory:
 
-templogger_serial - Setup Wifi and templogger application via serial monitor to input configuration data. The config is then saved to the EEPROM. The serial connection is no longer required for normal operation. Just apply power and the application runs.
+templogger_serial - Setup Wifi and templogger application via Serial Monitor to input configuration data. The config is then saved to the EEPROM. The serial connection is no longer required for normal operation. Just apply power and the application runs.
 
 templogger_accesspoint - Work in progress. NodeMCU will act as a Wifi Access Point and allow local operators to connect to a temporary SSID for the purposes of configuring the Wifi and templogger application.
 
@@ -52,10 +52,10 @@ Code snippet:
 
 ## Uploading templogger to NodeMCU / initial configuration
 
-After making the adjustments above, click upload in the main IDE window, and wait for the flashing process to finish. The NodeMCU will restart and you will be prompted to update the configuration. Enter the requested information. When finished you should have a working application, or at least enough information from the serial monitor to troubleshoot the issue.
+After making the adjustments above, click upload in the main IDE window, and wait for the flashing process to finish. The NodeMCU will restart and you will be prompted to update the configuration. Enter the requested information. When finished you should have a working application, or at least enough information from the Serial Monitor to troubleshoot the issue.
 
 ## Serial Monitor output
-When running properly, you'll see output like this on the serial monitor:
+When running properly, you'll see output like this:
 ```
 Temperature: 27 C
 Humidity: 25%
