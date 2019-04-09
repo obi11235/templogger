@@ -1,6 +1,6 @@
 # templogger
 
-A NodeMCU (ESP8266) based temperature and humidity logger that submits metrics to Datadog.
+A NodeMCU (ESP8266) based temperature and humidity logger that submits metrics to Datadog. Written with the Arduino IDE using C++.
 
 ## Some features:
 
