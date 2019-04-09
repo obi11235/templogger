@@ -47,7 +47,7 @@ https://www.amazon.com/HiLetgo-Temperature-Humidity-Arduino-Raspberry/dp/B01DKC2
 
 ## Diagnostic LEDs
 LED near USB port:
-* Blink - Datadog acknowledged receipt of either the temperature or the humidity metric.
+* Blink - Datadog acknowledged receipt of either the temperature or the humidity metric
 
 LED near Wifi antenna:
 Approximately 20 seconds after power on:
