@@ -33,7 +33,7 @@ Install sensor libraries via Tools > Manage Libraries:
 2. DHT sensor library by Adafruit (tested with version 1.3.4)
 3. DHT sensor library for ESPx by beegee_tokyo (tested with version 1.0.9)
 
-## Arduino IDE Serial Monitor Settings
+## Arduino IDE Serial Monitor settings
 
 Go to Tools > Port and select your port (ex. /dev/cu.SLAB_USBtoUART)
 
@@ -41,16 +41,31 @@ After plugging in the board to USB go to Serial Monitor and select the line endi
 * Newline
 * 74880 baud
 
-## DHT Sensor variations:
+## DHT sensor variations:
 You may use DHT11 or DHT22. You will have to update the code to reflect the model and the GPIO pin you're using for your sensor. templogger_serial code is currently set to DHT11 with the following wiring positions: Vin -> +, GND -> -, GPIO5 -> out
 
-Code snippet:\
-`#define DHTTYPE DHT11`\
-`#define DHTPIN  5`
+Code snippet:
+```
+#define DHTTYPE DHT11
+#define DHTPIN  5
+```
 
 ## Uploading templogger to NodeMCU / initial configuration
 
 After making the adjustments above, click upload in the main IDE window, and wait for the flashing process to finish. The NodeMCU will restart and you will be prompted to update the configuration. Enter the requested information. When finished you should have a working application, or at least enough information from the serial monitor to troubleshoot the issue.
+
+## Serial Monitor output
+When running properly, you'll see output like this on the serial monitor:
+```
+Temperature: 27 C
+Humidity: 25%
+sending NTP packet...
+1554837085
+connecting to api.datadoghq.com:443
+request sent
+{"status": "ok"}
+closing connection
+```
 
 ## Hardware in use:
 https://www.amazon.com/HiLetgo-Internet-Development-Wireless-Micropython/dp/B010N1SPRK/ref=sr_1_1?keywords=hiletgo+esp8266&qid=1554826323&s=hi&sr=1-1-catcorr
