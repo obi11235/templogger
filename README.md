@@ -12,11 +12,11 @@ A NodeMCU (ESP8266) based temperature and humidity logger that submits metrics t
 
 ## Project directory:
 
-templogger_serial - Setup Wifi and templogger application via Serial Monitor to input configuration data. The config is then saved to the EEPROM. The serial connection is no longer required for normal operation. Just apply power and the application runs.
+*templogger_serial* - Setup Wifi and templogger application via Serial Monitor to input configuration data. The config is then saved to the EEPROM. The serial connection is no longer required for normal operation. Just apply power and the application runs.
 
-templogger_accesspoint - Work in progress. NodeMCU will act as a Wifi Access Point and allow local operators to connect to a temporary SSID for the purposes of configuring the Wifi and templogger application.
+*templogger_accesspoint* - Work in progress. NodeMCU will act as a Wifi Access Point and allow local operators to connect to a temporary SSID for the purposes of configuring the Wifi and templogger application.
 
-templogger_simple - Not actively developed.
+*templogger_simple* - Not actively developed.
 
 ## Hardware in use:
 NodeMCU dev board
