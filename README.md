@@ -6,7 +6,7 @@ A NodeMCU (ESP8266) based temperature and humidity logger that submits metrics t
 
 * Uses the Datadog API to submit tagged metrics via HTTPS once per minute.
 * Saves configuration data (including SSID password and Datadog API key) to EEPROM instead of source code.
-* Serves a web page with status (Datadog tags), temperature, and humidity pages
+* Serves a web page with status (Datadog tags), temperature, and humidity pages.
 * Operational information via Arduino IDE Serial Monitor and diagnostic lights (optional lights out mode).
 * Networked temperature/humidity sensors for about $13 each!
 
