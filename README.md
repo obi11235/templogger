@@ -39,7 +39,7 @@ Add board via File > Preferences - Additional Board Manager URL and paste in:
 http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
 Install board support via Tools > Board > Board Manager:
-1. esp8266 by ESP8266 Community (tested with 2.5.0)
+1. esp8266 by ESP8266 Community (tested with version 2.5.0)
 
 Go to Tools > Board > Board Manager and select your board (ex. NodeMCU 1.0 ESP-12E Module)
 
