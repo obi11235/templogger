@@ -27,15 +27,21 @@ DHT11 temperature and humidity sensor
 
 https://www.amazon.com/HiLetgo-Temperature-Humidity-Arduino-Raspberry/dp/B01DKC2GQ0/ref=sr_1_1?keywords=hiletgo+dht11&qid=1554826409&s=hi&sr=1-1
 
+# Getting started
+## USB to Serial driver
+
+Install USB-Serial driver for your operating system and USB-Serial chip (ex. CP2102 USB-Serial chip)
+https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
+
 ## Arduino IDE dependencies:
 
 Add board via File > Preferences - Additional Board Manager URL and paste in:
 http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
-Go to Tools > Board > Board Manager and select your board (ex. NodeMCU 1.0 ESP-12E Module)
+Install board support via Tools > Board > Board Manager:
+1. esp8266 by ESP8266 Community (tested with 2.5.0)
 
-Install USB-Serial driver for your operating system and USB-Serial chip (ex. CP2102 USB-Serial chip)
-https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
+Go to Tools > Board > Board Manager and select your board (ex. NodeMCU 1.0 ESP-12E Module)
 
 Install sensor libraries via Tools > Manage Libraries:
 1. Adafruit Unified Sensor by Adafruit (tested with version 1.0.3)
@@ -44,13 +50,14 @@ Install sensor libraries via Tools > Manage Libraries:
 
 ## Arduino IDE Serial Monitor settings
 
-Go to Tools > Port and select your port (ex. /dev/cu.SLAB_USBtoUART)
+With the NodeMCU plugged in, go to Tools > Port and select your port (ex. /dev/cu.SLAB_USBtoUART)
 
-After plugging in the board to USB go to Serial Monitor and select the line ending and baud rate options.
+Then go to Serial Monitor and select the line ending and baud rate options.
 * Newline
 * 74880 baud
 
 ## DHT sensor variations:
+
 You may use DHT11 or DHT22. You will have to update the code to reflect the model and the GPIO pin you're using for your sensor. templogger_serial code is currently set to DHT11 with the following wiring positions: Vin -> +, GND -> -, GPIO5 -> out
 
 Code snippet:
@@ -63,7 +70,9 @@ Code snippet:
 
 After making the adjustments above, click upload in the main IDE window, and wait for the flashing process to finish. The NodeMCU will restart and you will be prompted to update the configuration. Enter the requested information. When finished you should have a working application, or at least enough information from the Serial Monitor to troubleshoot the issue.
 
+# Diagnostics
 ## Serial Monitor output
+
 When running properly, you'll see output like this:
 ```
 Temperature: 27 C
@@ -77,6 +86,7 @@ closing connection
 ```
 
 ## Diagnostic LEDs
+
 LED near USB port:
 * Blink - Datadog acknowledged receipt of either the temperature or the humidity metric
 
