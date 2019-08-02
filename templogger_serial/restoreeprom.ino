@@ -86,7 +86,7 @@ void readConfig(){
 
     Serial.println(password);
     Serial.print("Enter SSID Password: ");
-    read = Serial.readBytesUntil('\n', buffer, 32);
+    read = Serial.readBytesUntil('\n', buffer, 64);
     if(read > 0){
       buffer[read] = '\0';
       Serial.println(buffer);
@@ -149,7 +149,7 @@ void readConfig(){
 
     Serial.println(dc);
     Serial.print("Enter dc: ");
-    read = Serial.readBytesUntil('\n', buffer, 6);
+    read = Serial.readBytesUntil('\n', buffer, 32);
     if(read > 0){
       buffer[read] = '\0';
       Serial.println(buffer);

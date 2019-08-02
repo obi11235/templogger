@@ -37,7 +37,7 @@ WiFiUDP udp;
 
 void setupNTP()
 {
-  Serial.println("Starting UDP fron NTP");
+  Serial.println("Starting UDP from NTP");
   udp.begin(localPort);
   Serial.print("Local port: ");
   Serial.println(udp.localPort());

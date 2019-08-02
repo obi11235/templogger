@@ -32,16 +32,18 @@ void sendmetric(String metric, float value, unsigned int epoch){
   Serial.print(":");
   Serial.println(httpsPort);
 
-  if (!client.connect(host, httpsPort)) {
-    Serial.println("connection failed");
-    return;
-  }
-
 //  if (client.verify(fingerprint, host)) {
 //    Serial.println("certificate matches");
 //  } else {
 //    Serial.println("certificate doesn't match");
 //  }
+
+  client.setFingerprint(fingerprint);
+
+  if (!client.connect(host, httpsPort)) {
+    Serial.println("connection failed");
+    return;
+  }
   
   String url = "/api/v1/series?api_key="+String(apikey);
 //  Serial.print("requesting URL: ");
@@ -76,6 +78,11 @@ void sendmetric(String metric, float value, unsigned int epoch){
   String line = client.readStringUntil('\n');
   //Serial.println("reply was:");
   //Serial.println("==========");
+  if (line.startsWith("{\"status\": \"ok\"}") && leds_on) {
+    digitalWrite(D0, HIGH); // Blink NodeMCU LED to indicate DD success
+    delay(300);
+    digitalWrite(D0, LOW);
+  }
   Serial.println(line);
   //Serial.println("==========");
   Serial.println("closing connection");
